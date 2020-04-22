@@ -4,7 +4,7 @@ var size;
 var previousSize;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
   colorMode(HSL);
   frameRate(30);
   strokeWeight(0);
@@ -43,13 +43,10 @@ function updateText(){
 
 //quite crappy but it doesn't really matter in that program
 function writeText(){
-    text(text[0], 50, 50);
-    text(text[1], 50, 70);
-    text(text[2], 100, 100);
-    text(text[3], 150, 150);
-    text(text[4], 200, 200);
-    text(text[5], 220, 220);
-    text(text[6], 250, 250);
+  for(i=0; i<=n; i++){
+    text(text[i], 50+10*i, 50+20*i);
+  }
+  text("cliquer pour allonger \nla liste de mots", 200, 400);
 }
 
 //in order to simulate words added to the text file
